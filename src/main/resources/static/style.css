@@ -1,0 +1,11 @@
+input{
+    border: 1px solid black;
+    width: 100px;
+    color: black;
+}
+
+label{
+    display: flex;
+    justify-content: space-between;
+    width: 225px;
+}

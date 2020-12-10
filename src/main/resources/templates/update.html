@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Book</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+
+    {{>nav}}
+
+    <div class="flex justify-center mt-8">
+        <form method="POST" action="/books/update" name="Book" class="flex flex-col">
+
+            <input hidden name="id" value="{{id}}" />
+
+            <label>
+                Author:
+                <input value="{{author}}" type="text" name="author" />
+            </label>
+            <label>
+                Publisher:
+                <input value="{{publisher}}" type="text" name="publisher" />
+            </label>
+            <label>
+                Publish Date:
+                <input value="{{publishDate}}" type="text" name="publishDate" placeholder="YYYY-MM-DD"/>
+            </label>
+
+            <button type="submit" class="text-3xl mt-8">Update</button>
+        </form>
+    </div>
+
+</body>
+</html>
